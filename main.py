@@ -8,7 +8,7 @@ app_dir = os.path.dirname(os.path.abspath(__file__))
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///feelz.db'
 app.config['SECRET_KEY'] = '4LceOr3wdHDusCXt6bzioyK8f12NXCcvXGhIP0XgPRm6GGHlWhP8dA'
-bot_token = '6926337764:AAFHR2riRBsBtItfc5M_fC-C92_mtuUX5g4'
+bot_token = '6773819389:AAE-OYFbtkhIZDsoC67YTzo1LGRO777MPMc'
 bot = telebot.TeleBot(bot_token)
 
 db=SQLAlchemy(app)
@@ -340,7 +340,7 @@ def submit_form_bot():
         try:
             phone = request.form['phone']
             message = request.form['message']
-            chat_id = '-4093013396'
+            chat_id = '-4191498856'
             
             # Отправка данных в телеграм
             send_to_telegram(chat_id, f'Новая заявка:\nтел:{phone}\nсообщение:{message}')
@@ -355,7 +355,7 @@ def consult_form_bot():
     if request.method == 'POST':
         try:
             phone = request.form['phone']
-            chat_id = '-4093013396'
+            chat_id = '-4191498856'
             
             # Отправка данных в телеграм
             send_to_telegram(chat_id, f'Новая заявка на консультацию:\nтел:{phone}')

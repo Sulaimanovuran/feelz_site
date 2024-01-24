@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- ==================== FAVICON ==================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicon/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicon/favicon-16x16.png') }}">
-    <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='images/favicon/site.webmanifest') }}"> -->
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon/icons8-f-50.png') }}">">
 
     <!-- ==================== REMIXICONS ==================== -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
@@ -18,14 +19,14 @@
     <!-- ==================== CSS ==================== -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
 
-    <title>Redline</title>
+    <title>Feelz</title>
 </head>
 <body>
     <!-- ==================== HEADER ==================== -->
     <header class="header" id="header">
         <nav class="nav container">
             <a href="" class="nav__logo">
-                <img src="{{ url_for('static', filename='images/medium-logo.png') }}" alt="" width="100">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="" width="60">
             </a>
 
             <div class="nav__menu">
@@ -47,7 +48,7 @@
                     <li class="nav__item">
                         <a href="#discount" class="nav__link">
                             <i class="ri-price-tag-3-line"></i>
-                            <span>Our Works</span>
+                            <span>Our Services</span>
                         </a>
                     </li>
 
@@ -61,7 +62,7 @@
                     <li class="nav__item">
                         <a href="#testimonial" class="nav__link">
                             <i class="ri-message-3-line"></i>
-                            <span>Staff</span>
+                            <span>Reviews</span>
                         </a>
                     </li>
 
@@ -139,7 +140,7 @@
                 <div class="home__data">
                 {% for text in main_texts %}
                     <h1 class="home__title">{{text.title_up}} <br>
-                        {{text.title_down}} <span style="color: red;">{{text.title_red}}</span> 
+                        {{text.title_down}} <span style="color: hsl(66, 61%, 47%);">{{text.title_red}}</span> 
                     </h1>
                     <p class="home__description">
                         {{text.description}}
@@ -167,21 +168,21 @@
             <div class="services__container container grid">
               
                     <article class="services__card">
-                        <i class="ri-quill-pen-fill"></i>
-                        <h3 class="services__title">Awesome Design</h3>
-                        <p class="services_description">Create your design</p>
+                        <i class="ri-file-paper-2-fill"></i>
+                        <h3 class="services__title">Unique Methodology</h3>
+                        <p class="services_description">Distinctive Approach Unveiled</p>
                     </article>
 
                     <article class="services__card">
-                        <i class="ri-code-s-slash-line"></i>
-                        <h3 class="services__title">IT Products</h3>
-                        <p class="services_description">Interesting IT solutions</p>
+                        <i class="ri-movie-2-fill"></i>
+                        <h3 class="services__title">Movie Training</h3>
+                        <p class="services_description">Elevate Skills Cinematically</p>
                     </article>
 
                     <article class="services__card">
-                        <i class="ri-customer-service-2-fill"></i>
-                        <h3 class="services__title">24/7 Suport</h3>
-                        <p class="services_description">Call us anytime </p>
+                        <i class="ri-line-chart-fill"></i>
+                        <h3 class="services__title">Fast Result</h3>
+                        <p class="services_description">Swift Outcome Achieved</p>
                     </article>
                
             </div>
@@ -190,7 +191,7 @@
         <!-- ==================== FEATURED ==================== -->
         <section class="featured section" id="featured">
             <h2 class="section__title">
-                Select Your Product
+                Choose Your Education Plan
             </h2>
 
             <div class="featured__container container">
@@ -234,7 +235,7 @@
                 <div class="discount__data">
                     
                     <h2 class="discount__title section__title">
-                        О <span style="color: red;">R</span>ed<span style="color: red;">l</span>ine
+                        О <span style="color: rgb(4, 177, 119);">Feelz</span>
                     </h2>
                 
                     <p class="discount__description">
@@ -256,7 +257,7 @@
         <!-- ==================== NEW BOOKS ==================== -->
         <section class="discount section" id="discount">
             <h2 class="section__title">
-                Our works
+                Our Products
             </h2>
 
             <div class="new__container container">
@@ -318,7 +319,7 @@
                 <div class="join__data container grid">
                     <h2 class="join__title section__title">
                         Get a free consultation <br>
-                        For your company
+                        For you and your loved ones
                     </h2>
 
                     <form action="/consult_form_bot" class="join__form" method="post">
@@ -337,7 +338,7 @@
         <!-- ==================== TESTIMONIAL ==================== -->
         <section class="testimonial section" id="testimonial">
             <h2 class="section__title">
-                Our craftsmen 
+                Reviews 
             </h2>
 
             <div class="testimonial__container container">
@@ -367,13 +368,13 @@
         <div class="footer__container container grid">
             <div>
                 <a href="#" class="footer__logo">
-                    <img src="{{ url_for('static', filename='images/medium-logo.png') }}" alt="" width="100">
+                    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="" width="100">
                 </a>
 
                 <p class="footer__description">
-                    Find and explore the best <br>
-                    Redline from all your <br>
-                    favorite designers.
+                    Explore engaging English<br>   
+                    courses for proficiency <br>
+                    and confidence in every skill.
                 </p>
             </div>
 
@@ -428,15 +429,15 @@
                     <ul class="footer__links">
                         <li>
                             <address class="footer__info">
-                                Турусбекова, 109/3 <br>
-                                8 этаж, 800 каб.
+                                ​Улица Фрунзе, 587<br>
+                                пересекает Калык Акиева
                             </address>
                         </li>
 
                         <li>
                             <address class="footer__info">
-                                redline@gmail.com <br>
-                                +996 707-123-456
+                                feelzcomp@gmail.com <br>
+                                +996 505-490-495
                             </address>
                         </li>
                     </ul>
@@ -465,7 +466,7 @@
         </div>
 
         <span class="footer__copy">
-            &#169; All Rights Reserved By Redline
+            &#169; All Rights Reserved By Feelz
         </span>
     </footer>
 
