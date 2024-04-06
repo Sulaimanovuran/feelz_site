@@ -1,14 +1,16 @@
 FROM python:3.9-slim
 
-WORKDIR /iq_site
+WORKDIR /app
+
+ENV FLASK_APP=main
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 COPY . .
 
+
 RUN pip install -r requirements.txt
+RUN pwd && ls
 
-EXPOSE 4000
-
-CMD ["gunicorn", "-b", "0.0.0.0:5000", "app:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "main:app"]
