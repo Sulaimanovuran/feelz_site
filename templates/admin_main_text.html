@@ -65,12 +65,12 @@
     <ul>
         <li>title up - верхнее слово. Пример: Ideas</li>
         <li>title down - след.строка. Пример: Illuminating</li>
-        <li>title red – слово которое будет выделено красным. Пример: Lines</li>
+        <li>title red – слово которое будет выделено зеленым. Пример: Lines</li>
         <li>description - описание снизу. Пример: В каждом пикселе ...</li>
     </ul>
     <form action="{{ url_for('admin_main_text') }}" method="post" enctype="multipart/form-data">
         <input type="text" name="title_up" placeholder="title up" required>
-        <input type="text" name="title_down" placeholder="title up" required>
+        <input type="text" name="title_down" placeholder="title down" required>
         <input type="text" name="title_red" placeholder="title red" required>
         <input type="text" name="description" placeholder="description" required>
         <button type="submit">Write</button>
